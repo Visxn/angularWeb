@@ -1,0 +1,106 @@
+.main_container{
+    display: flex;
+}
+p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+#welcome-header{
+    text-align: center;
+    width: 100vw;
+    height: 5vh;
+    margin-top: 150px;    
+
+}
+#welcome-text{
+    margin: 0;
+    padding-top: 0.5vh;
+    font-size: 25px;
+    font-weight: 900;
+}
+#btn-container{
+    margin-top: 5vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+
+  
+}
+.btn-text{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.btn-holder:hover{
+    background-color: #0291EE;
+}
+
+.btn-holder {
+  appearance: button;
+  height: 70px;
+  background-color: #000;
+  background-image: none;
+  border: 1px solid #000;
+  border-radius: 4px;
+  box-shadow: #fff 4px 4px 0 0,#000 4px 4px 0 1px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: ITCAvantGardeStd-Bk,Arial,sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  margin: 0 30px 10px 0;
+  overflow: visible;
+  padding: 12px 40px;
+  text-align: center;
+  text-transform: none;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  text-align: center;
+  justify-content: center;
+  white-space: nowrap;
+  
+}
+
+.btn-holder:focus {
+  text-decoration: none;
+}
+
+.btn-holder:hover {
+  text-decoration: none;
+}
+
+.btn-holder:active {
+  box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
+  outline: 0;
+}
+
+.btn-holder:not([disabled]):active {
+  box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .btn-holder {
+    padding: 12px 50px;
+  }
+}
+
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    color: #777C81;
+    padding-bottom: 20px;
+    text-align: center;
+    height: 30px;
+    margin: 0;
+}

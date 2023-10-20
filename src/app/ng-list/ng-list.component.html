@@ -1,0 +1,9 @@
+    
+    <div class="searchbar-container"> <input type="text" class="search-bar" [(ngModel)]="findText" (ngModelChange)="busqueda()" placeholder="Search a title!"  > </div>  
+    <div *ngIf="filteredPosts">
+        <div  *ngFor="let post of filteredPosts.slice(0, 15)" class="item-container" (click)="redirectPage(post.id)">
+            {{post.title}}
+        </div>
+    </div>
+   
+    

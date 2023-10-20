@@ -1,0 +1,27 @@
+.row {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 50vh;
+    flex-direction: row;
+
+    .promises-holder{
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    
+        width: 100vw;
+        height: 50vh;
+    }
+
+    .obvs-holder{
+        width: 100vw;
+        height: 50vh;
+        text-align: center;
+        align-items: center;
+        
+
+    }
+}

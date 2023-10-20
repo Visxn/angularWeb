@@ -1,0 +1,73 @@
+<div class="login-container">
+    <div class="login-text">
+        <p class="login-txt"> Login form </p>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <form [formGroup]="formUser" (ngSubmit)="processData()">
+                <div class="mb-2">
+                    <label class="form-label">
+                        <p> Nombre</p>
+                    </label>
+
+                    <input type="text" formControlName="name" class="form-control" placeholder="Ingrese su nombre">
+
+                    <div class="alert-danger" [hidden]="formUser.get('name')?.valid || formUser.get('name')?.pristine">
+                        <p class="error">El nombre es obligatorio</p>
+
+                    </div>
+
+                </div>
+
+                <div class="mb-2">
+                    <label class="form-label">
+                        <p> Email </p>
+                    </label>
+                    <input type="text" formControlName="email" placeholder="Ingrese su email">
+
+                    <div class="alert-danger"
+                        [hidden]="formUser.get('email')?.valid || formUser.get('email')?.pristine">
+                        <span *ngIf="formUser.get('email')?.errors?.['required']">
+                            <p class="error"> El email es obligatorio </p>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="mb-2">
+                    <label class="form-label">
+                        <p> Password </p>
+                    </label>
+                    <input type="text" formControlName="password" class="form-control"
+                        placeholder="Ingrese su password">
+                    <div class="alert-danger"
+                        [hidden]="formUser.get('password')?.valid || formUser.get('password')?.pristine">
+                        <p class="error"> El password es obligatorio</p>
+                    </div>
+                </div>
+               
+                <div class="checkbox-wrapper-3">
+                    <input type="checkbox" id="cbx-3" formControlName="moreFields"/>
+                    <label for="cbx-3" class="toggle"><span></span></label>
+                    <p class="checkbox-txt"> Quires anadir mas info?</p>
+                  </div>
+                
+                <div class="moreFields" *ngIf="hasMoreFields()" [@fadeInOut]>
+                    <label class="form-label">
+                        <p> Direccion </p>
+                    </label>
+                    <input type="text" id="extra1" class="form-control" formControlName="direccion" placeholder="Ingrese direccion">
+                    <label class="form-label">
+                        <p> Profesion </p>
+                    </label>
+                    <input type="text" id="extra2" class="form-control" formControlName="profesion" placeholder="Ingrese profesion">
+                </div>
+
+                <button class="btn-login" [disabled]="formUser.invalid">
+                    Enviar
+                </button>
+            </form>
+
+        </div>
+    </div>
+</div>
