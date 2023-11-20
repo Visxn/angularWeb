@@ -31,7 +31,7 @@ export class LoginComponent {
     });
 
     processData(){
-      console.log(this.formUser.value);
+      console.log(this.formUser.value.email);
     }
     
     hasMoreFields(){

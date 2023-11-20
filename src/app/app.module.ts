@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SquareComponent } from './square/square.component';
 import { NgListComponent } from './ng-list/ng-list.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { MenuScreenComponent } from './menu-screen/menu-screen.component';
@@ -15,7 +15,13 @@ import { GraphicsComponent } from './graphics/graphics.component';
 import { ChartModule } from 'angular-highcharts';
 import { ListRedirectComponent } from './list-redirect/list-redirect.component';
 import { RxjsScreenComponent } from './rxjs-screen/rxjs-screen.component';
+import { TranslationsComponent } from './translations/translations.component';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 
 
 @NgModule({
@@ -27,7 +33,8 @@ import { RxjsScreenComponent } from './rxjs-screen/rxjs-screen.component';
     LoginComponent,
     GraphicsComponent,
     ListRedirectComponent,
-    RxjsScreenComponent
+    RxjsScreenComponent,
+    TranslationsComponent
     
     
   ],
@@ -40,8 +47,16 @@ import { RxjsScreenComponent } from './rxjs-screen/rxjs-screen.component';
     ReactiveFormsModule,
     BrowserModule,
     BrowserAnimationsModule,
-    ChartModule
-  ],
+    ChartModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [ HttpClient ],
+      }
+    })
+   ],
   providers: [],
   bootstrap: [AppComponent]
 })

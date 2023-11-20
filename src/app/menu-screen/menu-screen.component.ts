@@ -30,5 +30,9 @@ export class MenuScreenComponent {
   navigateToSquares() {
     this.router.navigate(["square"])
   }
+
+  navigateToTranslations() {
+    this.router.navigate(["translations"])
+  }
 }
 

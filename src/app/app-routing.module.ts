@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { GraphicsComponent } from './graphics/graphics.component';
 import { ListRedirectComponent } from './list-redirect/list-redirect.component';
 import { RxjsScreenComponent } from './rxjs-screen/rxjs-screen.component';
+import { TranslationsComponent } from './translations/translations.component';
 
 const routes: Routes = [ 
   { path: 'ng-list', component: NgListComponent },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'Login', component: LoginComponent },
   { path: 'Graph', component: GraphicsComponent },
   { path: 'RxJS', component: RxjsScreenComponent },
+  { path: 'translations', component: TranslationsComponent },
   { path:'redirected-list/:id', component: ListRedirectComponent},
   { path: '', redirectTo: '/menu-screen', pathMatch: 'full' },
   { path: '**', component: MenuScreenComponent }
