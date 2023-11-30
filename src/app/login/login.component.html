@@ -28,9 +28,11 @@
 
                     <div class="alert-danger"
                         [hidden]="formUser.get('email')?.valid || formUser.get('email')?.pristine">
-                        <span *ngIf="formUser.get('email')?.errors?.['required']">
+                        @if (formUser.get('email')?.errors?.['required']) {
+<span>
                             <p class="error"> El email es obligatorio </p>
                         </span>
+}
                     </div>
                 </div>
 
@@ -52,7 +54,8 @@
                     <p class="checkbox-txt"> Quires anadir mas info?</p>
                   </div>
                 
-                <div class="moreFields" *ngIf="hasMoreFields()" [@fadeInOut]>
+                @if (hasMoreFields()) {
+<div class="moreFields" [@fadeInOut]>
                     <label class="form-label">
                         <p> Direccion </p>
                     </label>
@@ -62,6 +65,7 @@
                     </label>
                     <input type="text" id="extra2" class="form-control" formControlName="profesion" placeholder="Ingrese profesion">
                 </div>
+}
 
                 <button class="btn-login" [disabled]="formUser.invalid">
                     Enviar

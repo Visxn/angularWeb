@@ -1,16 +1,15 @@
 
-<div id="contenedor" *ngIf="loading">
+@if ( loading  ) {
+<div id="contenedor">
     <div class="contenedor-loader">
       <div class="rueda"></div>
     </div>
     <div class="cargando">Cargando...</div>
     
   </div>
+}
 
 <div class="charts">  
-    <div class="line" [chart]="lineChart" >
-    </div>
-
- 
+    <div class="line" [chart]="lineChart">
+    </div> 
 </div>
-

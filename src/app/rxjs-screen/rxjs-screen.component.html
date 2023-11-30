@@ -1,15 +1,19 @@
 <div class="container">
     <div class="row">
-        <div class="promises-holder" *ngIf="dataFromApi1">
+        @if (dataFromApi1) {
+<div class="promises-holder">
             <div class="dataApi"> 
                 <p class="dataText">{{ dataFromApi1.body}} </p>
             </div>
         </div>
+}
        
-        <div class="obvs-holder" *ngIf="dataFromApi6" > 
+        @if (dataFromApi6) {
+<div class="obvs-holder" > 
             <div class="dataApi"> 
                 <p class="dataText"> {{ dataFromApi6.body}}  </p>
             </div>
         </div>
+}
     </div>
 </div>
