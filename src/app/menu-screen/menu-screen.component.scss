@@ -19,15 +19,16 @@ p{
     font-size: 25px;
     font-weight: 900;
 }
-#btn-container{
+.btn-container{
+  display: flex;
     margin-top: 5vh;
-    display: flex;
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
-
-  
+   
+    
 }
+
 .btn-text{
     justify-content: center;
     align-items: center;
@@ -41,6 +42,7 @@ p{
 
 .btn-holder {
   appearance: button;
+  width: 200px;
   height: 70px;
   background-color: #000;
   background-image: none;
@@ -66,7 +68,6 @@ p{
   text-align: center;
   justify-content: center;
   white-space: nowrap;
-  
 }
 
 .btn-holder:focus {

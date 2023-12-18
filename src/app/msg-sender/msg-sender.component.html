@@ -1,0 +1,17 @@
+<div class="main">
+    <div class="card">
+        <div class="messages" appScrollToBottom>
+            <div [class.message_me]="message.userName == userName" [class.message_other]="!(message.userName == userName)" *ngFor="let message of messages">
+                    <div class="message_name">{{message.userName}}</div>
+                    <div class="message_text">{{message.message}}</div>
+            </div>
+        </div>  
+        <form [formGroup]="messageForm" (ngSubmit)="sendMessage()" class='form'>
+            <div class="sender">
+                <input class="input" type="text" formControlName="message" id="message" required>
+                <button class="button" type="submit"></button> 
+            </div>
+        </form>
+
+  
+</div>

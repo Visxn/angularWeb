@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./menu-screen.component.scss']
 })
 export class MenuScreenComponent {
+
   
   constructor( private router: Router){
 
@@ -18,7 +19,10 @@ export class MenuScreenComponent {
   navigateToGraph(){
     this.router.navigate(["Graph"])
   }
+  navigateToAws() {
+    this.router.navigate(["aws"])
 
+  }
   navigateToList() {
     this.router.navigate(["ng-list"])
   }

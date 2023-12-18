@@ -18,6 +18,10 @@ import { RxjsScreenComponent } from './rxjs-screen/rxjs-screen.component';
 import { TranslationsComponent } from './translations/translations.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { MsgSenderComponent } from './msg-sender/msg-sender.component';
+import { ScrollToBottomDirective } from './directives/scroll-to-bottom.directive';
+import { RandomNumberChartComponent } from './random-number-chart/random-number-chart.component';
+import { GraphicNumbersComponent } from './graphic-numbers/graphic-numbers.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -34,9 +38,12 @@ export function HttpLoaderFactory(http: HttpClient) {
     GraphicsComponent,
     ListRedirectComponent,
     RxjsScreenComponent,
-    TranslationsComponent
-    
-    
+    TranslationsComponent,
+    MsgSenderComponent,
+    ScrollToBottomDirective,
+    RandomNumberChartComponent,
+    GraphicNumbersComponent
+
   ],
   imports: [
     BrowserModule,
